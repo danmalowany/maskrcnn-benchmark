@@ -17,6 +17,9 @@ from maskrcnn_benchmark.utils.comm import synchronize, get_rank
 from maskrcnn_benchmark.utils.logger import setup_logger
 from maskrcnn_benchmark.utils.miscellaneous import mkdir
 
+from trains import Task
+task = Task.init()
+
 # Check if we can enable mixed-precision via apex.amp
 try:
     from apex import amp
