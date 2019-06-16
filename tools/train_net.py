@@ -157,6 +157,10 @@ def main():
 
     cfg.merge_from_file(args.config_file)
     cfg.merge_from_list(args.opts)
+    
+    cfg.INPUT.MAX_SIZE_TRAIN = 800 
+    cfg.SOLVER.IMS_PER_BATCH = 1 
+    
     cfg.freeze()
 
     output_dir = cfg.OUTPUT_DIR
