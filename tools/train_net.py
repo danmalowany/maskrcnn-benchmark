@@ -127,7 +127,8 @@ def main():
     parser = argparse.ArgumentParser(description="PyTorch Object Detection Training")
     parser.add_argument(
         "--config-file",
-        default="",
+        default=os.path.join(os.path.expanduser('~/'),
+                             "Projects/public/maskrcnn-benchmark/configs/e2e_mask_rcnn_R_50_FPN_1x.yaml"),
         metavar="FILE",
         help="path to config file",
         type=str,
