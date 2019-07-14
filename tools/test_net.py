@@ -32,7 +32,8 @@ def main():
     parser = argparse.ArgumentParser(description="PyTorch Object Detection Inference")
     parser.add_argument(
         "--config-file",
-        default="/private/home/fmassa/github/detectron.pytorch_v2/configs/e2e_faster_rcnn_R_50_C4_1x_caffe2.yaml",
+        default=os.path.join(os.path.expanduser('~/'),
+                             'Projects/seematics/maskrcnn-benchmark-new/configs/e2e_faster_rcnn_R_50_C4_1x.yaml'),
         metavar="FILE",
         help="path to config file",
     )
